@@ -26,11 +26,13 @@ $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_PIXEL_CHARGER := true
 
-# Gapps
-USE_GAPPS := true
+# Kangos official
+KANGOS_BUILDTYPE := OFFICIAL
 
-#Inherit some Kang Stuff
-ro.kangos.maintainer= FernandoSanchez(@fernandosanch)
+# Kangos Maintainer
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.kangos.maintainer=FernandoSánchez(@fernandosanch) \
+  ro.kangos.cpu=SDM665 
 
 $(call inherit-product, vendor/kangos/config/common.mk)
 
